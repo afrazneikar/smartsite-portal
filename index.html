@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Site Technology - Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="portal-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <span class="logo-text">SmartSite</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-label">Main</span>
+                    <a href="#" class="nav-item active" data-page="dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="projects">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Projects</span>
+                        <span class="nav-badge">24</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="lifecycle">
+                        <i class="fas fa-stream"></i>
+                        <span>Lifecycle</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-label">Applications</span>
+                    <a href="#" class="nav-item app-link" data-app="handoff">
+                        <i class="fas fa-robot"></i>
+                        <span>Handoff AI</span>
+                        <span class="nav-badge ai">AI</span>
+                    </a>
+                    <a href="#" class="nav-item app-link" data-app="jobtread">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Jobtread</span>
+                    </a>
+                    <a href="#" class="nav-item app-link" data-app="docvault">
+                        <i class="fas fa-file-alt"></i>
+                        <span>DocVault</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-label">Financials</span>
+                    <a href="#" class="nav-item" data-page="estimates">
+                        <i class="fas fa-calculator"></i>
+                        <span>Estimates</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="invoices">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <span>Invoices</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="reports">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reports</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search projects, estimates, documents...">
+                        <kbd>Ctrl+K</kbd>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <button class="topbar-btn" title="App Launcher" onclick="toggleAppLauncher()">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="topbar-btn" title="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <div class="user-menu">
+                        <img src="https://ui-avatars.com/api/?name=John+Contractor&background=6366f1&color=fff" alt="User" class="user-avatar">
+                        <div class="user-info">
+                            <span class="user-name">John Contractor</span>
+                            <span class="user-role">Admin</span>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                        <p>Welcome back! Here's what's happening with your projects.</p>
+                    </div>
+                    <div class="page-actions">
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                        <button class="btn btn-primary" onclick="showModal('newProject')">
+                            <i class="fas fa-plus"></i> New Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value">24</span>
+                            <span class="stat-label">Active Projects</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value">$4.2M</span>
+                            <span class="stat-label">Pipeline Value</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 8%
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value">47</span>
+                            <span class="stat-label">Estimates (MTD)</span>
+                        </div>
+                        <div class="stat-trend up">
+                            <i class="fas fa-arrow-up"></i> 23%
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-data">
+                            <span class="stat-value">89%</span>
+                            <span class="stat-label">On-Time Delivery</span>
+                        </div>
+                        <div class="stat-trend down">
+                            <i class="fas fa-arrow-down"></i> 2%
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Grid -->
+                <div class="dashboard-grid">
+                    <!-- Construction Lifecycle -->
+                    <div class="card lifecycle-card">
+                        <div class="card-header">
+                            <h3>Construction Lifecycle</h3>
+                            <a href="#" class="card-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="lifecycle-pipeline">
+                            <div class="pipeline-stage">
+                                <div class="stage-bar" style="--progress: 80%; --color: #6366f1;"></div>
+                                <div class="stage-info">
+                                    <span class="stage-name">Pre-Construction</span>
+                                    <span class="stage-count">8 projects</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="stage-bar" style="--progress: 50%; --color: #8b5cf6;"></div>
+                                <div class="stage-info">
+                                    <span class="stage-name">Procurement</span>
+                                    <span class="stage-count">5 projects</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="stage-bar" style="--progress: 100%; --color: #10b981;"></div>
+                                <div class="stage-info">
+                                    <span class="stage-name">Construction</span>
+                                    <span class="stage-count">12 projects</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="stage-bar" style="--progress: 40%; --color: #f59e0b;"></div>
+                                <div class="stage-info">
+                                    <span class="stage-name">Closeout</span>
+                                    <span class="stage-count">4 projects</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="stage-bar" style="--progress: 60%; --color: #06b6d4;"></div>
+                                <div class="stage-info">
+                                    <span class="stage-name">Warranty</span>
+                                    <span class="stage-count">15 projects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions / App Shortcuts -->
+                    <div class="card apps-card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="quick-apps">
+                            <button class="quick-app" onclick="showModal('newEstimate')">
+                                <div class="app-icon purple">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <span class="app-name">AI Estimate</span>
+                                <span class="app-desc">Handoff AI</span>
+                            </button>
+                            <button class="quick-app" onclick="showModal('newInvoice')">
+                                <div class="app-icon green">
+                                    <i class="fas fa-file-invoice-dollar"></i>
+                                </div>
+                                <span class="app-name">New Invoice</span>
+                                <span class="app-desc">Jobtread</span>
+                            </button>
+                            <button class="quick-app" onclick="showModal('uploadDoc')">
+                                <div class="app-icon orange">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <span class="app-name">Upload Docs</span>
+                                <span class="app-desc">DocVault</span>
+                            </button>
+                            <button class="quick-app" onclick="showModal('newProject')">
+                                <div class="app-icon blue">
+                                    <i class="fas fa-plus-circle"></i>
+                                </div>
+                                <span class="app-name">New Project</span>
+                                <span class="app-desc">Create</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Projects -->
+                    <div class="card projects-card">
+                        <div class="card-header">
+                            <h3>Recent Projects</h3>
+                            <a href="#" class="card-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="projects-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Phase</th>
+                                        <th>Value</th>
+                                        <th>Progress</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="project-cell">
+                                                <div class="project-icon"><i class="fas fa-city"></i></div>
+                                                <div class="project-info">
+                                                    <span class="project-name">Riverside Commercial Complex</span>
+                                                    <span class="project-client">Riverside Development LLC</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="phase-badge construction">Construction</span></td>
+                                        <td>$2.4M</td>
+                                        <td>
+                                            <div class="progress-cell">
+                                                <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+                                                <span>65%</span>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn-icon"><i class="fas fa-ellipsis-h"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-cell">
+                                                <div class="project-icon green"><i class="fas fa-building"></i></div>
+                                                <div class="project-info">
+                                                    <span class="project-name">Downtown Office Tower</span>
+                                                    <span class="project-client">Metro Properties Inc</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="phase-badge closeout">Closeout</span></td>
+                                        <td>$1.8M</td>
+                                        <td>
+                                            <div class="progress-cell">
+                                                <div class="progress-bar"><div class="progress" style="width: 89%"></div></div>
+                                                <span>89%</span>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn-icon"><i class="fas fa-ellipsis-h"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-cell">
+                                                <div class="project-icon orange"><i class="fas fa-home"></i></div>
+                                                <div class="project-info">
+                                                    <span class="project-name">Parkview Residential</span>
+                                                    <span class="project-client">Parkview Homes</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="phase-badge preconstruction">Pre-Construction</span></td>
+                                        <td>$890K</td>
+                                        <td>
+                                            <div class="progress-cell">
+                                                <div class="progress-bar"><div class="progress" style="width: 15%"></div></div>
+                                                <span>15%</span>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn-icon"><i class="fas fa-ellipsis-h"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-cell">
+                                                <div class="project-icon purple"><i class="fas fa-hospital"></i></div>
+                                                <div class="project-info">
+                                                    <span class="project-name">Highland Medical Center</span>
+                                                    <span class="project-client">Highland Health Systems</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="phase-badge procurement">Procurement</span></td>
+                                        <td>$3.2M</td>
+                                        <td>
+                                            <div class="progress-cell">
+                                                <div class="progress-bar"><div class="progress" style="width: 28%"></div></div>
+                                                <span>28%</span>
+                                            </div>
+                                        </td>
+                                        <td><button class="btn-icon"><i class="fas fa-ellipsis-h"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Activity Feed -->
+                    <div class="card activity-card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <a href="#" class="card-link">View All <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon purple">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>AI Estimate completed</strong></p>
+                                    <span class="activity-meta">Riverside Complex via Handoff AI</span>
+                                    <span class="activity-time">10 min ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon green">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Invoice #1247 paid</strong></p>
+                                    <span class="activity-meta">$45,000 - Downtown Office Tower</span>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon blue">
+                                    <i class="fas fa-file-upload"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Contract uploaded</strong></p>
+                                    <span class="activity-meta">Highland Medical Center</span>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon orange">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Weather delay reported</strong></p>
+                                    <span class="activity-meta">Metro Station Renovation</span>
+                                    <span class="activity-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon purple">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Subcontractor added</strong></p>
+                                    <span class="activity-meta">Elite Electrical - Parkview Residential</span>
+                                    <span class="activity-time">Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Summary -->
+                    <div class="card financial-card">
+                        <div class="card-header">
+                            <h3>Financial Summary</h3>
+                            <select class="period-select">
+                                <option>This Month</option>
+                                <option>Last Month</option>
+                                <option>This Quarter</option>
+                            </select>
+                        </div>
+                        <div class="financial-summary">
+                            <div class="fin-row">
+                                <div class="fin-item">
+                                    <span class="fin-label">Revenue</span>
+                                    <span class="fin-value">$1,247,500</span>
+                                    <span class="fin-change positive"><i class="fas fa-arrow-up"></i> 12.5%</span>
+                                </div>
+                                <div class="fin-item">
+                                    <span class="fin-label">Expenses</span>
+                                    <span class="fin-value">$892,300</span>
+                                    <span class="fin-change negative"><i class="fas fa-arrow-up"></i> 8.2%</span>
+                                </div>
+                            </div>
+                            <div class="fin-row">
+                                <div class="fin-item highlight">
+                                    <span class="fin-label">Net Profit</span>
+                                    <span class="fin-value">$355,200</span>
+                                    <span class="fin-change positive"><i class="fas fa-arrow-up"></i> 23.1%</span>
+                                </div>
+                                <div class="fin-item">
+                                    <span class="fin-label">Outstanding</span>
+                                    <span class="fin-value warning">$428,750</span>
+                                    <span class="fin-change">14 invoices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- App Launcher Dropdown -->
+    <div id="appLauncher" class="app-launcher">
+        <div class="launcher-header">
+            <h4>Applications</h4>
+            <button class="close-launcher" onclick="toggleAppLauncher()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="launcher-grid">
+            <a href="#" class="launcher-app" onclick="openApp('handoff')">
+                <div class="launcher-icon purple"><i class="fas fa-robot"></i></div>
+                <span>Handoff AI</span>
+                <small>Estimation</small>
+            </a>
+            <a href="#" class="launcher-app" onclick="openApp('jobtread')">
+                <div class="launcher-icon green"><i class="fas fa-chart-line"></i></div>
+                <span>Jobtread</span>
+                <small>Sales & Finance</small>
+            </a>
+            <a href="#" class="launcher-app" onclick="openApp('docvault')">
+                <div class="launcher-icon orange"><i class="fas fa-file-alt"></i></div>
+                <span>DocVault</span>
+                <small>Documents</small>
+            </a>
+        </div>
+        <div class="launcher-footer">
+            <a href="#">Manage Apps <i class="fas fa-cog"></i></a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
