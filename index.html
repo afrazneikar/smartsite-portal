@@ -34,132 +34,108 @@
                 <a href="#solutions">Solutions</a>
                 <a href="https://www.ssite.ai" target="_blank">About</a>
             </nav>
-            <a href="#solutions" class="btn-header">Get Started</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Main Hero with Lifecycle -->
+    <section class="hero-lifecycle">
         <div class="container">
-            <div class="hero-content">
-                <h1>Construction<br><span class="highlight">Lifecycle Portal</span></h1>
-                <p>Connecting your construction workflow from estimation to completion with integrated AI-powered solutions.</p>
-                <div class="hero-apps">
-                    <a href="https://www.handoff.ai" target="_blank" class="hero-app">
-                        <div class="app-badge">AI Estimation</div>
-                        <img src="https://ui-avatars.com/api/?name=H&background=6366f1&color=fff&size=40&bold=true&rounded=true" alt="Handoff AI">
-                        <span>Handoff AI</span>
-                    </a>
-                    <span class="app-connector">+</span>
-                    <a href="https://www.jobtread.com" target="_blank" class="hero-app">
-                        <div class="app-badge">Sales & Finance</div>
-                        <img src="https://ui-avatars.com/api/?name=JT&background=10b981&color=fff&size=40&bold=true&rounded=true" alt="Jobtread">
-                        <span>Jobtread</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
-
-    <!-- Construction Lifecycle -->
-    <section id="lifecycle" class="lifecycle">
-        <div class="container">
-            <div class="section-header">
-                <h2>Construction Lifecycle</h2>
+            <div class="hero-header">
+                <h1>Construction <span class="highlight">Lifecycle Portal</span></h1>
                 <p>Integrated solutions powering every phase of your project</p>
             </div>
 
-            <div class="lifecycle-visual">
-                <!-- Phase 1: Pre-Construction -->
-                <div class="phase" data-phase="1">
+            <div class="lifecycle-flow" id="lifecycle">
+                <!-- Phase 1 -->
+                <div class="phase-card">
+                    <div class="phase-number">01</div>
                     <div class="phase-icon">
                         <i class="fas fa-clipboard-list"></i>
                     </div>
-                    <div class="phase-content">
-                        <h3>Pre-Construction</h3>
-                        <p>Planning & Estimation</p>
-                    </div>
-                    <a href="https://www.handoff.ai" target="_blank" class="phase-app handoff">
-                        <i class="fas fa-robot"></i>
-                        <span>Handoff AI</span>
-                        <i class="fas fa-external-link-alt"></i>
+                    <h3>Pre-Construction</h3>
+                    <p>Planning & Estimation</p>
+                    <a href="https://www.handoff.ai" target="_blank" class="phase-link handoff">
+                        <i class="fas fa-robot"></i> Handoff AI
                     </a>
                 </div>
 
-                <div class="phase-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="phase-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
 
-                <!-- Phase 2: Sales -->
-                <div class="phase" data-phase="2">
+                <!-- Phase 2 -->
+                <div class="phase-card">
+                    <div class="phase-number">02</div>
                     <div class="phase-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
-                    <div class="phase-content">
-                        <h3>Sales</h3>
-                        <p>Proposals & Contracts</p>
-                    </div>
-                    <a href="https://www.jobtread.com" target="_blank" class="phase-app jobtread">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Jobtread</span>
-                        <i class="fas fa-external-link-alt"></i>
+                    <h3>Sales</h3>
+                    <p>Proposals & Contracts</p>
+                    <a href="https://www.jobtread.com" target="_blank" class="phase-link jobtread">
+                        <i class="fas fa-chart-line"></i> Jobtread
                     </a>
                 </div>
 
-                <div class="phase-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="phase-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
 
-                <!-- Phase 3: Construction -->
-                <div class="phase" data-phase="3">
+                <!-- Phase 3 -->
+                <div class="phase-card">
+                    <div class="phase-number">03</div>
                     <div class="phase-icon">
                         <i class="fas fa-hard-hat"></i>
                     </div>
-                    <div class="phase-content">
-                        <h3>Construction</h3>
-                        <p>Project Execution</p>
-                    </div>
-                    <div class="phase-apps-row">
-                        <a href="https://www.handoff.ai" target="_blank" class="phase-app-sm handoff">
+                    <h3>Construction</h3>
+                    <p>Project Execution</p>
+                    <div class="phase-links-row">
+                        <a href="https://www.handoff.ai" target="_blank" class="phase-link-sm handoff">
                             <i class="fas fa-robot"></i>
                         </a>
-                        <a href="https://www.jobtread.com" target="_blank" class="phase-app-sm jobtread">
+                        <a href="https://www.jobtread.com" target="_blank" class="phase-link-sm jobtread">
                             <i class="fas fa-chart-line"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="phase-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="phase-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
 
-                <!-- Phase 4: Finance -->
-                <div class="phase" data-phase="4">
+                <!-- Phase 4 -->
+                <div class="phase-card">
+                    <div class="phase-number">04</div>
                     <div class="phase-icon">
                         <i class="fas fa-file-invoice-dollar"></i>
                     </div>
-                    <div class="phase-content">
-                        <h3>Finance</h3>
-                        <p>Invoicing & Payments</p>
-                    </div>
-                    <a href="https://www.jobtread.com" target="_blank" class="phase-app jobtread">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Jobtread</span>
-                        <i class="fas fa-external-link-alt"></i>
+                    <h3>Finance</h3>
+                    <p>Invoicing & Payments</p>
+                    <a href="https://www.jobtread.com" target="_blank" class="phase-link jobtread">
+                        <i class="fas fa-chart-line"></i> Jobtread
                     </a>
                 </div>
 
-                <div class="phase-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="phase-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
 
-                <!-- Phase 5: Closeout -->
-                <div class="phase" data-phase="5">
+                <!-- Phase 5 -->
+                <div class="phase-card">
+                    <div class="phase-number">05</div>
                     <div class="phase-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <div class="phase-content">
-                        <h3>Closeout</h3>
-                        <p>Completion & Handover</p>
-                    </div>
-                    <div class="phase-apps-row">
-                        <a href="https://www.handoff.ai" target="_blank" class="phase-app-sm handoff">
+                    <h3>Closeout</h3>
+                    <p>Completion & Handover</p>
+                    <div class="phase-links-row">
+                        <a href="https://www.handoff.ai" target="_blank" class="phase-link-sm handoff">
                             <i class="fas fa-robot"></i>
                         </a>
-                        <a href="https://www.jobtread.com" target="_blank" class="phase-app-sm jobtread">
+                        <a href="https://www.jobtread.com" target="_blank" class="phase-link-sm jobtread">
                             <i class="fas fa-chart-line"></i>
                         </a>
                     </div>
@@ -172,52 +148,48 @@
     <section id="solutions" class="solutions">
         <div class="container">
             <div class="section-header">
-                <h2>Integrated Solutions</h2>
-                <p>Click to launch your construction tools</p>
+                <span class="section-label">Integrated Solutions</span>
+                <h2>Your Construction Tools</h2>
             </div>
 
             <div class="solutions-grid">
                 <!-- Handoff AI -->
                 <a href="https://www.handoff.ai" target="_blank" class="solution-card handoff">
-                    <div class="solution-header">
-                        <div class="solution-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <span class="solution-badge">AI Powered</span>
+                    <div class="solution-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Handoff AI</h3>
-                    <p class="solution-type">Estimation & Takeoffs</p>
-                    <p class="solution-desc">AI-powered construction estimation. Generate accurate takeoffs and bids in minutes.</p>
-                    <ul class="solution-features">
-                        <li><i class="fas fa-check"></i> Automated Takeoffs</li>
-                        <li><i class="fas fa-check"></i> AI Bid Generation</li>
-                        <li><i class="fas fa-check"></i> Cost Analysis</li>
-                        <li><i class="fas fa-check"></i> Plan Reading</li>
-                    </ul>
-                    <div class="solution-cta">
-                        Launch Handoff AI <i class="fas fa-arrow-right"></i>
+                    <div class="solution-content">
+                        <div class="solution-badge">AI Powered</div>
+                        <h3>Handoff AI</h3>
+                        <p>Estimation & Takeoffs</p>
+                        <ul>
+                            <li>Automated Takeoffs</li>
+                            <li>AI Bid Generation</li>
+                            <li>Cost Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="solution-arrow">
+                        <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
 
                 <!-- Jobtread -->
                 <a href="https://www.jobtread.com" target="_blank" class="solution-card jobtread">
-                    <div class="solution-header">
-                        <div class="solution-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <span class="solution-badge">Finance</span>
+                    <div class="solution-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Jobtread</h3>
-                    <p class="solution-type">Sales & Financial Management</p>
-                    <p class="solution-desc">End-to-end sales pipeline and financial management for construction businesses.</p>
-                    <ul class="solution-features">
-                        <li><i class="fas fa-check"></i> Sales Pipeline</li>
-                        <li><i class="fas fa-check"></i> Proposals & Contracts</li>
-                        <li><i class="fas fa-check"></i> Invoicing</li>
-                        <li><i class="fas fa-check"></i> Financial Reports</li>
-                    </ul>
-                    <div class="solution-cta">
-                        Launch Jobtread <i class="fas fa-arrow-right"></i>
+                    <div class="solution-content">
+                        <div class="solution-badge">Finance</div>
+                        <h3>Jobtread</h3>
+                        <p>Sales & Financial Management</p>
+                        <ul>
+                            <li>Sales Pipeline</li>
+                            <li>Invoicing</li>
+                            <li>Financial Reports</li>
+                        </ul>
+                    </div>
+                    <div class="solution-arrow">
+                        <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
             </div>
@@ -240,10 +212,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <div>
-                        <strong>Smart Site Technology</strong>
-                        <p>Construction Lifecycle Portal</p>
-                    </div>
+                    <span>Smart Site Technology</span>
                 </div>
                 <div class="footer-links">
                     <a href="https://www.ssite.ai" target="_blank">ssite.ai</a>
@@ -252,7 +221,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Smart Site Technology. All rights reserved.</p>
+                <p>&copy; 2026 Smart Site Technology</p>
             </div>
         </div>
     </footer>
