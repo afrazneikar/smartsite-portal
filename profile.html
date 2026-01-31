@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Smart Site Technology</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                    <svg class="logo-icon" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="0" y2="80">
+                                <stop offset="0%" stop-color="#5BC4D4"/>
+                                <stop offset="100%" stop-color="#2BA3B5"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M10 75 L10 40 L35 20 L50 32 L50 45 L35 33 L25 40 L25 75 Z" fill="url(#logoGrad)"/>
+                        <path d="M90 75 L90 40 L65 20 L50 32 L50 45 L65 33 L75 40 L75 75 Z" fill="url(#logoGrad)"/>
+                        <path d="M50 5 L62 20 L50 35 L38 20 Z" fill="url(#logoGrad)"/>
+                    </svg>
+                    <div class="logo-text">
+                        <span class="logo-name">Smart Site</span>
+                        <span class="logo-tag">Technology</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Portal</a>
+                <a href="index.html#licenses">Plans</a>
+                <a href="profile.html" class="active">My Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h1>John Smith</h1>
+                    <p class="company">ABC Construction Company</p>
+                    <p class="email"><i class="fas fa-envelope"></i> john.smith@abcconstruction.com</p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-secondary"><i class="fas fa-cog"></i> Settings</button>
+                </div>
+            </div>
+
+            <!-- License Summary Cards -->
+            <div class="license-summary">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="summary-content">
+                        <span class="summary-number">2</span>
+                        <span class="summary-label">Active Licenses</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon handoff">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="summary-content">
+                        <span class="summary-number">38</span>
+                        <span class="summary-label">Projects This Month</span>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon jobtread">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="summary-content">
+                        <span class="summary-number">5</span>
+                        <span class="summary-label">Team Members</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Licenses Section -->
+            <div class="my-licenses">
+                <div class="section-title">
+                    <h2>My Licenses</h2>
+                    <a href="index.html#licenses" class="btn-text">View All Plans <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="licenses-grid">
+                    <!-- Handoff AI License -->
+                    <div class="user-license-card handoff">
+                        <div class="license-header">
+                            <div class="license-app">
+                                <div class="app-icon handoff">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="app-info">
+                                    <h3>Handoff AI</h3>
+                                    <span class="plan-name">Professional Plan</span>
+                                </div>
+                            </div>
+                            <span class="license-status active">
+                                <i class="fas fa-check-circle"></i> Active
+                            </span>
+                        </div>
+
+                        <div class="license-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Projects</span>
+                                <div class="usage-bar">
+                                    <div class="usage-fill" style="width: 76%;"></div>
+                                </div>
+                                <span class="detail-value">38 / 50</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Renewal Date</span>
+                                <span class="detail-value">Mar 15, 2026</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Monthly Cost</span>
+                                <span class="detail-value price">$299/mo</span>
+                            </div>
+                        </div>
+
+                        <div class="license-features">
+                            <div class="feature"><i class="fas fa-check"></i> Advanced AI Takeoffs</div>
+                            <div class="feature"><i class="fas fa-check"></i> Multi-format Support</div>
+                            <div class="feature"><i class="fas fa-check"></i> API Access</div>
+                        </div>
+
+                        <div class="license-actions">
+                            <a href="https://www.handoff.ai" target="_blank" class="btn-primary handoff">
+                                <i class="fas fa-external-link-alt"></i> Open Handoff AI
+                            </a>
+                            <button class="btn-outline">Manage License</button>
+                        </div>
+                    </div>
+
+                    <!-- Jobtread License -->
+                    <div class="user-license-card jobtread">
+                        <div class="license-header">
+                            <div class="license-app">
+                                <div class="app-icon jobtread">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="app-info">
+                                    <h3>Jobtread</h3>
+                                    <span class="plan-name">Growth Plan</span>
+                                </div>
+                            </div>
+                            <span class="license-status active">
+                                <i class="fas fa-check-circle"></i> Active
+                            </span>
+                        </div>
+
+                        <div class="license-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Users</span>
+                                <div class="usage-bar jobtread">
+                                    <div class="usage-fill" style="width: 50%;"></div>
+                                </div>
+                                <span class="detail-value">5 / 10</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Renewal Date</span>
+                                <span class="detail-value">Apr 1, 2026</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Monthly Cost</span>
+                                <span class="detail-value price">$745/mo</span>
+                            </div>
+                        </div>
+
+                        <div class="license-features">
+                            <div class="feature"><i class="fas fa-check"></i> Advanced CRM</div>
+                            <div class="feature"><i class="fas fa-check"></i> Full Financial Suite</div>
+                            <div class="feature"><i class="fas fa-check"></i> Integrations</div>
+                        </div>
+
+                        <div class="license-actions">
+                            <a href="https://www.jobtread.com" target="_blank" class="btn-primary jobtread">
+                                <i class="fas fa-external-link-alt"></i> Open Jobtread
+                            </a>
+                            <button class="btn-outline">Manage License</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Upgrades -->
+            <div class="available-upgrades">
+                <div class="section-title">
+                    <h2>Available Upgrades</h2>
+                </div>
+
+                <div class="upgrades-grid">
+                    <div class="upgrade-card handoff">
+                        <div class="upgrade-badge">Upgrade Available</div>
+                        <div class="upgrade-content">
+                            <div class="upgrade-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="upgrade-info">
+                                <h4>Handoff AI Enterprise</h4>
+                                <p>Unlimited projects, custom AI training, and dedicated support</p>
+                            </div>
+                        </div>
+                        <a href="https://www.handoff.ai" target="_blank" class="btn-upgrade handoff">
+                            Contact Sales <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="upgrade-card jobtread">
+                        <div class="upgrade-badge">Upgrade Available</div>
+                        <div class="upgrade-content">
+                            <div class="upgrade-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="upgrade-info">
+                                <h4>Jobtread Scale</h4>
+                                <p>Unlimited users, multi-company support, and advanced analytics</p>
+                            </div>
+                        </div>
+                        <a href="https://www.jobtread.com" target="_blank" class="btn-upgrade jobtread">
+                            Contact Sales <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Billing History -->
+            <div class="billing-section">
+                <div class="section-title">
+                    <h2>Recent Billing</h2>
+                    <button class="btn-text">View All <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="billing-table">
+                    <div class="billing-row header">
+                        <span>Date</span>
+                        <span>Description</span>
+                        <span>Amount</span>
+                        <span>Status</span>
+                    </div>
+                    <div class="billing-row">
+                        <span>Jan 15, 2026</span>
+                        <span>Handoff AI - Professional</span>
+                        <span>$299.00</span>
+                        <span class="status paid"><i class="fas fa-check-circle"></i> Paid</span>
+                    </div>
+                    <div class="billing-row">
+                        <span>Jan 1, 2026</span>
+                        <span>Jobtread - Growth (5 users)</span>
+                        <span>$745.00</span>
+                        <span class="status paid"><i class="fas fa-check-circle"></i> Paid</span>
+                    </div>
+                    <div class="billing-row">
+                        <span>Dec 15, 2025</span>
+                        <span>Handoff AI - Professional</span>
+                        <span>$299.00</span>
+                        <span class="status paid"><i class="fas fa-check-circle"></i> Paid</span>
+                    </div>
+                    <div class="billing-row">
+                        <span>Dec 1, 2025</span>
+                        <span>Jobtread - Growth (5 users)</span>
+                        <span>$745.00</span>
+                        <span class="status paid"><i class="fas fa-check-circle"></i> Paid</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="footer-logo" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad2" x1="0" y1="0" x2="0" y2="80">
+                                <stop offset="0%" stop-color="#5BC4D4"/>
+                                <stop offset="100%" stop-color="#2BA3B5"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M10 75 L10 40 L35 20 L50 32 L50 45 L35 33 L25 40 L25 75 Z" fill="url(#logoGrad2)"/>
+                        <path d="M90 75 L90 40 L65 20 L50 32 L50 45 L65 33 L75 40 L75 75 Z" fill="url(#logoGrad2)"/>
+                        <path d="M50 5 L62 20 L50 35 L38 20 Z" fill="url(#logoGrad2)"/>
+                    </svg>
+                    <span>Smart Site Technology</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.ssite.ai" target="_blank">ssite.ai</a>
+                    <a href="https://www.handoff.ai" target="_blank">Handoff AI</a>
+                    <a href="https://www.jobtread.com" target="_blank">Jobtread</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smart Site Technology</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
