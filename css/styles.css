@@ -848,203 +848,306 @@ body {
     background: var(--jobtread-dark);
 }
 
-/* Licenses Section */
+/* Licenses/Plans Section */
 .licenses {
     padding: 80px 0;
     background: var(--gray-50);
 }
 
-.license-group {
-    margin-bottom: 48px;
+.licenses .section-header p {
+    font-size: 16px;
+    color: var(--gray-500);
+    margin-top: 8px;
 }
 
-.license-group:last-child {
-    margin-bottom: 0;
+/* Product Tabs */
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
 }
 
-.license-group-header {
+.tab-btn {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px 24px;
-    border-radius: 12px 12px 0 0;
-    margin-bottom: 0;
-}
-
-.license-group-header.handoff {
-    background: linear-gradient(135deg, var(--handoff) 0%, var(--primary) 100%);
-}
-
-.license-group-header.jobtread {
-    background: linear-gradient(135deg, var(--jobtread) 0%, var(--jobtread-dark) 100%);
-}
-
-.license-group-header i {
-    font-size: 24px;
-    color: var(--white);
-}
-
-.license-group-header h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--white);
-    margin: 0;
-}
-
-.license-group-header span {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    margin-left: auto;
-}
-
-.license-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    gap: 10px;
+    padding: 14px 28px;
     background: var(--white);
-    border-radius: 0 0 12px 12px;
     border: 2px solid var(--gray-200);
-    border-top: none;
-    overflow: hidden;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.license-card {
-    padding: 32px 28px;
-    text-align: center;
-    position: relative;
-    border-right: 1px solid var(--gray-200);
-    transition: all 0.3s;
-}
-
-.license-card:last-child {
-    border-right: none;
-}
-
-.license-card:hover {
+.tab-btn:hover {
+    border-color: var(--gray-300);
     background: var(--gray-50);
 }
 
-.license-card.popular {
-    background: linear-gradient(180deg, rgba(79, 70, 229, 0.03) 0%, var(--white) 100%);
+.tab-btn.active {
+    background: var(--gradient);
+    border-color: transparent;
+    color: var(--white);
 }
 
-.popular-badge {
+.tab-btn i {
+    font-size: 18px;
+}
+
+/* Plans Container */
+.plans-container {
+    display: none;
+}
+
+.plans-container.active {
+    display: block;
+}
+
+.plans-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 28px;
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0;
+}
+
+.plans-header.handoff {
+    background: linear-gradient(135deg, var(--handoff) 0%, var(--primary) 100%);
+}
+
+.plans-header.jobtread {
+    background: linear-gradient(135deg, var(--jobtread) 0%, var(--jobtread-dark) 100%);
+}
+
+.plans-header .product-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 0 4px 0;
+}
+
+.plans-header .product-info p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.plans-header .learn-more {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.plans-header .learn-more:hover {
+    color: var(--white);
+}
+
+.plans-header .learn-more i {
+    font-size: 12px;
+}
+
+/* Plans Grid */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 32px;
+    background: var(--white);
+    border-radius: 0 0 16px 16px;
+    border: 2px solid var(--gray-200);
+    border-top: none;
+}
+
+/* Plan Card */
+.plan-card {
+    padding: 28px;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.plan-card:hover {
+    border-color: var(--gray-300);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.plan-card.featured {
+    border-color: var(--handoff);
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.04) 0%, var(--white) 100%);
+}
+
+.plan-card.featured.jobtread {
+    border-color: var(--jobtread);
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, var(--white) 100%);
+}
+
+.featured-badge {
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--gradient);
+    background: var(--handoff);
     color: var(--white);
     font-size: 11px;
     font-weight: 600;
     padding: 6px 16px;
-    border-radius: 0 0 8px 8px;
+    border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
-.license-tier {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: 16px;
+.plan-card.featured.jobtread .featured-badge {
+    background: var(--jobtread);
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan-card.featured .plan-header {
     margin-top: 8px;
 }
 
-.license-card.popular .license-tier {
-    margin-top: 24px;
+.plan-header h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
 }
 
-.license-price {
+.plan-header p {
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+.plan-price {
+    text-align: center;
     margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-200);
 }
 
-.license-price .price {
-    font-size: 36px;
+.plan-price .currency {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    vertical-align: top;
+}
+
+.plan-price .amount {
+    font-size: 48px;
     font-weight: 800;
     color: var(--gray-900);
+    line-height: 1;
 }
 
-.license-price .period {
+.plan-price .amount.custom {
+    font-size: 32px;
+}
+
+.plan-price .period {
     font-size: 14px;
     color: var(--gray-500);
 }
 
-.license-features {
+/* Plan Features */
+.plan-features {
     list-style: none;
-    text-align: left;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
-.license-features li {
+.plan-features li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     padding: 10px 0;
     font-size: 14px;
     color: var(--gray-700);
-    border-bottom: 1px solid var(--gray-100);
 }
 
-.license-features li:last-child {
-    border-bottom: none;
-}
-
-.license-features i {
+.plan-features li i {
     font-size: 12px;
-    color: var(--jobtread);
-    width: 16px;
-}
-
-.license-group-header.handoff + .license-cards .license-features i {
     color: var(--handoff);
+    width: 16px;
+    flex-shrink: 0;
 }
 
-.license-btn {
-    display: inline-block;
+#jobtread-plans .plan-features li i {
+    color: var(--jobtread);
+}
+
+/* Plan Button */
+.plan-btn {
+    display: block;
     width: 100%;
     padding: 14px 24px;
+    background: var(--gray-100);
+    border: none;
     border-radius: 10px;
-    font-weight: 600;
     font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-700);
     text-decoration: none;
-    transition: all 0.2s;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.license-btn.handoff {
+.plan-btn:hover {
+    background: var(--gray-200);
+}
+
+.plan-btn.primary {
     background: var(--handoff);
     color: var(--white);
 }
 
-.license-btn.handoff:hover {
+.plan-btn.primary:hover {
     background: var(--handoff-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
-.license-btn.handoff.outline {
-    background: transparent;
-    border: 2px solid var(--handoff);
-    color: var(--handoff);
-}
-
-.license-btn.handoff.outline:hover {
-    background: var(--handoff);
-    color: var(--white);
-}
-
-.license-btn.jobtread {
+.plan-btn.primary.jobtread {
     background: var(--jobtread);
-    color: var(--white);
 }
 
-.license-btn.jobtread:hover {
+.plan-btn.primary.jobtread:hover {
     background: var(--jobtread-dark);
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
+.plan-btn.outline {
+    background: transparent;
+    border: 2px solid var(--gray-300);
+}
+
+.plan-btn.outline:hover {
+    border-color: var(--handoff);
+    color: var(--handoff);
+}
+
+.plan-btn.outline.jobtread:hover {
+    border-color: var(--jobtread);
+    color: var(--jobtread);
+}
+
+/* Old license-btn kept for backward compatibility */
 .license-btn.jobtread.outline {
     background: transparent;
     border: 2px solid var(--jobtread);
@@ -1141,8 +1244,28 @@ body {
         width: 160px;
     }
 
-    .license-group-header span {
-        display: none;
+    .plans-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .plan-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .plans-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
     }
 }
 
@@ -1196,29 +1319,16 @@ body {
         text-align: center;
     }
 
-    .license-cards {
-        grid-template-columns: 1fr;
+    .product-tabs {
+        flex-direction: column;
     }
 
-    .license-card {
-        border-right: none;
-        border-bottom: 1px solid var(--gray-200);
-    }
-
-    .license-card:last-child {
-        border-bottom: none;
-    }
-
-    .license-group-header {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .license-group-header span {
+    .tab-btn {
         width: 100%;
-        margin-left: 0;
-        margin-top: 4px;
-        display: block;
+        justify-content: center;
+    }
+
+    .plans-grid {
+        padding: 20px;
     }
 }

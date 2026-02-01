@@ -206,119 +206,182 @@
             <div class="section-header">
                 <span class="section-label">Licensing Options</span>
                 <h2>Choose Your Plan</h2>
+                <p>Select the right tools for your construction business</p>
             </div>
 
-            <!-- Handoff AI Licenses -->
-            <div class="license-group">
-                <div class="license-group-header handoff">
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <button class="tab-btn active" data-product="handoff">
                     <i class="fas fa-robot"></i>
-                    <h3>Handoff AI</h3>
-                    <span>AI-Powered Estimation & Takeoffs</span>
+                    <span>Handoff AI</span>
+                </button>
+                <button class="tab-btn" data-product="jobtread">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Jobtread</span>
+                </button>
+            </div>
+
+            <!-- Handoff AI Plans -->
+            <div class="plans-container active" id="handoff-plans">
+                <div class="plans-header handoff">
+                    <div class="product-info">
+                        <h3>Handoff AI</h3>
+                        <p>AI-Powered Estimation & Takeoffs</p>
+                    </div>
+                    <a href="https://www.handoff.ai" target="_blank" class="learn-more">
+                        Learn more <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                <div class="license-cards">
-                    <div class="license-card">
-                        <div class="license-tier">Starter</div>
-                        <div class="license-price">
-                            <span class="price">$99</span>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Starter</h4>
+                            <p>For small contractors</p>
+                        </div>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
                             <span class="period">/month</span>
                         </div>
-                        <ul class="license-features">
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> 10 Projects/month</li>
                             <li><i class="fas fa-check"></i> Basic AI Takeoffs</li>
                             <li><i class="fas fa-check"></i> PDF Plan Upload</li>
                             <li><i class="fas fa-check"></i> Email Support</li>
                         </ul>
-                        <a href="https://www.handoff.ai" target="_blank" class="license-btn handoff">Get Started</a>
+                        <a href="https://www.handoff.ai" target="_blank" class="plan-btn">Get Started</a>
                     </div>
-                    <div class="license-card popular">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="license-tier">Professional</div>
-                        <div class="license-price">
-                            <span class="price">$299</span>
+
+                    <div class="plan-card featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h4>Professional</h4>
+                            <p>For growing teams</p>
+                        </div>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
                             <span class="period">/month</span>
                         </div>
-                        <ul class="license-features">
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> 50 Projects/month</li>
                             <li><i class="fas fa-check"></i> Advanced AI Takeoffs</li>
                             <li><i class="fas fa-check"></i> Multi-format Support</li>
                             <li><i class="fas fa-check"></i> Priority Support</li>
                             <li><i class="fas fa-check"></i> API Access</li>
                         </ul>
-                        <a href="https://www.handoff.ai" target="_blank" class="license-btn handoff">Get Started</a>
+                        <a href="https://www.handoff.ai" target="_blank" class="plan-btn primary">Get Started</a>
                     </div>
-                    <div class="license-card">
-                        <div class="license-tier">Enterprise</div>
-                        <div class="license-price">
-                            <span class="price">Custom</span>
+
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Enterprise</h4>
+                            <p>For large organizations</p>
                         </div>
-                        <ul class="license-features">
+                        <div class="plan-price">
+                            <span class="amount custom">Custom</span>
+                        </div>
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Unlimited Projects</li>
                             <li><i class="fas fa-check"></i> Custom AI Training</li>
                             <li><i class="fas fa-check"></i> White-label Option</li>
                             <li><i class="fas fa-check"></i> Dedicated Support</li>
                             <li><i class="fas fa-check"></i> SLA Guarantee</li>
                         </ul>
-                        <a href="https://www.handoff.ai" target="_blank" class="license-btn handoff outline">Contact Sales</a>
+                        <a href="https://www.handoff.ai" target="_blank" class="plan-btn outline">Contact Sales</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Jobtread Licenses -->
-            <div class="license-group">
-                <div class="license-group-header jobtread">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Jobtread</h3>
-                    <span>Sales & Financial Management</span>
+            <!-- Jobtread Plans -->
+            <div class="plans-container" id="jobtread-plans">
+                <div class="plans-header jobtread">
+                    <div class="product-info">
+                        <h3>Jobtread</h3>
+                        <p>Sales & Financial Management</p>
+                    </div>
+                    <a href="https://www.jobtread.com" target="_blank" class="learn-more">
+                        Learn more <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                <div class="license-cards">
-                    <div class="license-card">
-                        <div class="license-tier">Basic</div>
-                        <div class="license-price">
-                            <span class="price">$79</span>
-                            <span class="period">/user/month</span>
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Basic</h4>
+                            <p>For small teams</p>
                         </div>
-                        <ul class="license-features">
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                            <span class="period">/user/mo</span>
+                        </div>
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Up to 3 Users</li>
                             <li><i class="fas fa-check"></i> Sales Pipeline</li>
                             <li><i class="fas fa-check"></i> Basic Invoicing</li>
                             <li><i class="fas fa-check"></i> Email Support</li>
                         </ul>
-                        <a href="https://www.jobtread.com" target="_blank" class="license-btn jobtread">Get Started</a>
+                        <a href="https://www.jobtread.com" target="_blank" class="plan-btn">Get Started</a>
                     </div>
-                    <div class="license-card popular">
-                        <div class="popular-badge">Best Value</div>
-                        <div class="license-tier">Growth</div>
-                        <div class="license-price">
-                            <span class="price">$149</span>
-                            <span class="period">/user/month</span>
+
+                    <div class="plan-card featured jobtread">
+                        <div class="featured-badge">Best Value</div>
+                        <div class="plan-header">
+                            <h4>Growth</h4>
+                            <p>For scaling businesses</p>
                         </div>
-                        <ul class="license-features">
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/user/mo</span>
+                        </div>
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Up to 10 Users</li>
                             <li><i class="fas fa-check"></i> Advanced CRM</li>
                             <li><i class="fas fa-check"></i> Full Financial Suite</li>
                             <li><i class="fas fa-check"></i> Custom Reports</li>
                             <li><i class="fas fa-check"></i> Integrations</li>
                         </ul>
-                        <a href="https://www.jobtread.com" target="_blank" class="license-btn jobtread">Get Started</a>
+                        <a href="https://www.jobtread.com" target="_blank" class="plan-btn primary jobtread">Get Started</a>
                     </div>
-                    <div class="license-card">
-                        <div class="license-tier">Scale</div>
-                        <div class="license-price">
-                            <span class="price">Custom</span>
+
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h4>Scale</h4>
+                            <p>For enterprises</p>
                         </div>
-                        <ul class="license-features">
+                        <div class="plan-price">
+                            <span class="amount custom">Custom</span>
+                        </div>
+                        <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Unlimited Users</li>
                             <li><i class="fas fa-check"></i> Multi-company</li>
                             <li><i class="fas fa-check"></i> Advanced Analytics</li>
                             <li><i class="fas fa-check"></i> Dedicated Manager</li>
                             <li><i class="fas fa-check"></i> Custom Workflows</li>
                         </ul>
-                        <a href="https://www.jobtread.com" target="_blank" class="license-btn jobtread outline">Contact Sales</a>
+                        <a href="https://www.jobtread.com" target="_blank" class="plan-btn outline jobtread">Contact Sales</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const product = btn.dataset.product;
+                document.querySelectorAll('.plans-container').forEach(container => {
+                    container.classList.remove('active');
+                });
+                document.getElementById(product + '-plans').classList.add('active');
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
