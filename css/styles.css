@@ -295,16 +295,18 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    max-width: 1100px;
+    align-items: flex-start;
+    padding: 0 40px;
+    max-width: 1200px;
     margin: 0 auto;
+    min-width: min-content;
 }
 
 .timeline-track {
     position: absolute;
     top: 24px;
-    left: 80px;
-    right: 80px;
+    left: 60px;
+    right: 60px;
     height: 4px;
     background: linear-gradient(90deg, var(--handoff) 0%, var(--primary) 50%, var(--jobtread) 100%);
     border-radius: 2px;
@@ -317,7 +319,8 @@ body {
     align-items: center;
     position: relative;
     z-index: 1;
-    flex: 1;
+    flex: 0 0 auto;
+    width: 180px;
 }
 
 .phase-dot {
@@ -332,6 +335,7 @@ body {
     margin-bottom: 20px;
     transition: all 0.3s;
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    flex-shrink: 0;
 }
 
 .phase-dot span {
@@ -364,9 +368,9 @@ body {
     background: var(--white);
     border: 2px solid var(--gray-200);
     border-radius: 16px;
-    padding: 24px 20px;
+    padding: 20px 16px;
     text-align: center;
-    width: 180px;
+    width: 160px;
     transition: all 0.3s;
 }
 
@@ -1280,24 +1284,31 @@ body {
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .lifecycle-timeline {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-        padding: 0;
+    .hero-lifecycle .container {
+        overflow-x: auto;
+        padding-bottom: 20px;
     }
 
-    .timeline-track {
-        display: none;
+    .lifecycle-timeline {
+        padding: 0 20px;
+        gap: 8px;
     }
 
     .timeline-phase {
-        flex: 0 0 auto;
+        width: 160px;
     }
 
     .phase-content {
-        width: 160px;
-        padding: 20px 16px;
+        width: 140px;
+        padding: 16px 12px;
+    }
+
+    .phase-content h3 {
+        font-size: 14px;
+    }
+
+    .phase-content p {
+        font-size: 12px;
     }
 
     .plans-grid {
@@ -1340,6 +1351,30 @@ body {
 
     .hero-header p {
         font-size: 16px;
+    }
+
+    .hero-lifecycle .container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .lifecycle-timeline {
+        min-width: 900px;
+        padding: 0 30px;
+    }
+
+    .timeline-track {
+        left: 50px;
+        right: 50px;
+    }
+
+    .timeline-phase {
+        width: 150px;
+    }
+
+    .phase-content {
+        width: 130px;
+        padding: 14px 10px;
     }
 
     .lifecycle-flow {
