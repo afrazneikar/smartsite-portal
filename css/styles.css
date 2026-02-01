@@ -290,158 +290,208 @@ body {
     color: var(--gray-500);
 }
 
-.lifecycle-flow {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0;
-}
-
-.phase-card {
-    background: var(--white);
-    border: 2px solid var(--gray-200);
-    border-radius: 16px;
-    padding: 28px 24px;
-    text-align: center;
-    width: 180px;
+/* Timeline Lifecycle */
+.lifecycle-timeline {
     position: relative;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.phase-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--primary);
-    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.12);
-}
-
-.phase-number {
+.timeline-track {
     position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--gradient);
-    color: var(--white);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
+    top: 24px;
+    left: 80px;
+    right: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--handoff) 0%, var(--primary) 50%, var(--jobtread) 100%);
+    border-radius: 2px;
+    z-index: 0;
 }
 
-.phase-card .phase-icon {
-    width: 52px;
-    height: 52px;
-    background: var(--gradient);
-    border-radius: 14px;
+.timeline-phase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.phase-dot {
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    border: 4px solid var(--primary);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 8px auto 16px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
-.phase-card .phase-icon i {
-    font-size: 22px;
+.phase-dot span {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.phase-dot.highlight {
+    background: var(--gradient);
+    border-color: transparent;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+.phase-dot.highlight span {
     color: var(--white);
 }
 
-.phase-card h3 {
-    font-size: 15px;
+.timeline-phase:hover .phase-dot {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.timeline-phase:hover .phase-dot.highlight {
+    transform: scale(1.2);
+}
+
+.phase-content {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    width: 180px;
+    transition: all 0.3s;
+}
+
+.timeline-phase:hover .phase-content {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.phase-icon-circle {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    transition: all 0.3s;
+}
+
+.phase-icon-circle i {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.timeline-phase:hover .phase-icon-circle {
+    background: var(--gradient);
+}
+
+.timeline-phase:hover .phase-icon-circle i {
+    color: var(--white);
+}
+
+.phase-content h3 {
+    font-size: 16px;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: 4px;
 }
 
-.phase-card p {
-    font-size: 12px;
+.phase-content p {
+    font-size: 13px;
     color: var(--gray-500);
     margin-bottom: 16px;
 }
 
-.phase-link {
-    display: inline-flex;
+/* Phase Tool Links */
+.phase-tool {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 8px;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 10px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     transition: all 0.2s;
 }
 
-.phase-link.handoff {
+.phase-tool.handoff {
     background: rgba(99, 102, 241, 0.1);
     color: var(--handoff);
 }
 
-.phase-link.handoff:hover {
+.phase-tool.handoff:hover {
     background: var(--handoff);
     color: var(--white);
 }
 
-.phase-link.jobtread {
+.phase-tool.jobtread {
     background: rgba(16, 185, 129, 0.1);
     color: var(--jobtread);
 }
 
-.phase-link.jobtread:hover {
+.phase-tool.jobtread:hover {
     background: var(--jobtread);
     color: var(--white);
 }
 
-.phase-links-row {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+.phase-tool i:last-child {
+    font-size: 10px;
+    opacity: 0.7;
 }
 
-.phase-link-sm {
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
+/* Dual Tool Links */
+.phase-tools-dual {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.phase-tool-mini {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-size: 18px;
     transition: all 0.2s;
 }
 
-.phase-link-sm.handoff {
+.phase-tool-mini.handoff {
     background: rgba(99, 102, 241, 0.1);
     color: var(--handoff);
 }
 
-.phase-link-sm.handoff:hover {
+.phase-tool-mini.handoff:hover {
     background: var(--handoff);
     color: var(--white);
+    transform: translateY(-2px);
 }
 
-.phase-link-sm.jobtread {
+.phase-tool-mini.jobtread {
     background: rgba(16, 185, 129, 0.1);
     color: var(--jobtread);
 }
 
-.phase-link-sm.jobtread:hover {
+.phase-tool-mini.jobtread:hover {
     background: var(--jobtread);
     color: var(--white);
-}
-
-.phase-connector {
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    color: var(--gray-300);
-}
-
-.phase-connector .connector-line {
-    width: 24px;
-    height: 2px;
-    background: var(--gray-300);
-}
-
-.phase-connector i {
-    font-size: 12px;
-    margin-left: 4px;
+    transform: translateY(-2px);
 }
 
 /* Lifecycle Section */
@@ -1230,18 +1280,24 @@ body {
 
 /* Responsive */
 @media (max-width: 1200px) {
-    .lifecycle-flow {
+    .lifecycle-timeline {
         flex-wrap: wrap;
-        gap: 16px;
         justify-content: center;
+        gap: 24px;
+        padding: 0;
     }
 
-    .phase-connector {
+    .timeline-track {
         display: none;
     }
 
-    .phase-card {
+    .timeline-phase {
+        flex: 0 0 auto;
+    }
+
+    .phase-content {
         width: 160px;
+        padding: 20px 16px;
     }
 
     .plans-grid {
